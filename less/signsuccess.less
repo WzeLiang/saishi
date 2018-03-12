@@ -1,0 +1,100 @@
+@searchback:#303030;//头部背景-筛选背景
+@inputback:#4e4e4e;//输入框背景
+@good-item:#f3f3f3;//商品背景
+@yellow:#ffb900;//选中type-item边框
+@gayborder:#4c4c4c;//未选中tpyeitem的边框
+@titlecolor:#eaeaea;//筛选标题颜色
+@itemcolor:#aeaeae;//筛选项颜色
+.row{
+  margin: 0;
+}
+a{
+  text-decoration: none!important;
+}
+p{
+  margin: 0;
+}
+.goods-content{
+      padding: 0 .2rem;
+      margin: .4rem 0 .5rem;
+      .content-title{
+        font-size: .45rem;
+        font-weight: 400;
+        margin-bottom: .2rem;
+        padding-bottom: .2rem;
+        border-bottom: 2px #eaeaea dashed;
+      }
+      .good-item{
+        width: 2.9rem;
+        background:@good-item;
+        margin-top: .1rem;
+        padding: 0;
+        &:nth-last-of-type(even){
+          margin-right: .2rem;
+        }
+        img{
+          width: 2.9rem;
+          height:3rem;
+        }
+        .goods-msg{
+          padding: .15rem;
+         .msg-price{
+           font-size: .26rem;
+           font-weight: 500;
+         }
+          .msg-title{
+            font-size: .28rem;
+            color: rgb(144,90,8);
+            border-bottom: solid 2px rgb(144,90,8);
+          }
+          .msg-red{
+            color: red;
+            font-size: .26rem;
+            font-weight: bold;
+          }
+          .msg-content{
+            vertical-align: middle;
+            color: white;
+            height: .5rem;
+            line-height: 0;
+            padding-bottom: .6rem;
+            background: rgb(129,81,28);
+            .content-numb{
+              font-size: .32rem;
+              display: inline-block;
+            }
+            .content-price{
+              font-size: .28rem;
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+    }
+
+
+
+.signsuccess{
+  padding-top: 1rem;
+
+}
+.signsuccess .title{
+  margin-bottom: 1em;
+  font-size: .35rem;
+}
+.signsuccess .content{
+  padding: 0 .5rem;
+  font-size: .26rem;
+  margin: 0;
+}
+.signsuccess .download{
+  margin:.5rem .3rem ;
+  display: block;
+  background: rgb(9,187,7);
+  font-size: .28rem;
+  color: white;
+  height: .5rem;
+  line-height: .5rem;
+  border-radius: .08rem;
+}
