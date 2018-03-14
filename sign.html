@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <link rel="stylesheet" href="src/sign.css">
+    <link rel="stylesheet" href="src/common.css">
+    <script src="src/jquery.min.js"></script>
+    <script src="src/alertPopShow.js"></script>
+    <title>太平洋联盟赛事</title>
+    <style>
+        .web_toast{
+            top: 50px;
+            font-size: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="head text-center">-->
+        <!--太平洋联盟赛事-->
+    <!--</div>-->
+    <div class="container">
+            <div class="col-md-4 col-sm-4 cellitem">
+                <img class="img-responsive " src="images/logo.png" alt="">
+                <div class="most-1 index-imgtext">
+                    <p>暑期早鸟，琉球追夏，带娃去冲绳避暑
+                        </p>
+                    <a href="#" id="demo4" class="text-center">签到</a>
+            </div>
+            </div>
+        <div class="col-md-4 col-sm-4 cellitem">
+            <img class="img-responsive " src="images/logo.png" alt="">
+            <div class="most-1 index-imgtext">
+                <p>暑期早鸟，琉球追夏，带娃去冲绳避暑
+                </p>
+                <a href="signsuccess.html" class="text-center">签到</a>
+            </div>
+        </div>
+            <!--<div class="col-md-4 col-sm-4 cellitem">-->
+                <!--<img class="img-responsive " src="images/切图_03.jpg" alt="">-->
+                <!--<div class="most-1 index-imgtext">-->
+                    <!--<p>暑期早鸟，琉球追夏，带娃去冲绳避暑</p>-->
+                    <!--<a href="#" class="text-center">签到</a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--<div class="col-md-4 col-sm-4 cellitem">-->
+            <!--<img class="img-responsive " src="images/切图_03.jpg" alt="">-->
+            <!--<div class="most-1 index-imgtext">-->
+                <!--<p>暑期早鸟，琉球追夏，带娃去冲绳避暑</p>-->
+                <!--<a href="#" class="text-center">签到</a>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $(function(){
+
+            $('#demo4').on('click', function(){
+                var html = "<div><label>姓名：</label><input class='confirm_input form-control' placeholder='请输入'>";
+                popTipShow.confirm('请输入姓名',html,['确 定','取 消'],
+                    function(e){
+                        //callback 处理按钮事件
+                        var button = $(e.target).attr('class');
+                        if(button == 'ok'){
+                            if(null==$(".confirm_input").val() || ""==$(".confirm_input").val()){
+                                webToast("姓名不能为空！","bottom", 30000);
+                                return;
+                            }
+
+                            this.hide();
+                            setTimeout(function() {
+                                webToast($(".confirm_input").val(),"bottom", 3000);
+                            }, 300);
+
+                            //按下确定按钮执行的操作
+                            //todo ....
+                        }
+
+                        if(button == 'cancel') {
+                            //按下取消按钮执行的操作
+                            //todo ....
+                            this.hide();
+                            setTimeout(function() {
+                                webToast("您选择“取消”了","top", 2000);
+                            }, 300);
+                        }
+                    }
+                );
+            });
+
+        });
+    </script>
+</body>
+</html>
